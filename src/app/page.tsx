@@ -5,13 +5,13 @@ import { Hero } from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import About from "@/components/About";
-import Link from "next/link";
-import AOS from "aos"
+// import Link from "next/link"; // This line is no longer needed
+import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function Home() {
-  useEffect (() =>{
+  useEffect(() => {
     AOS.init({
       easing: "ease-out-back",
       duration: 1200,
@@ -22,7 +22,6 @@ export default function Home() {
     });
     AOS.refresh();
   }, []);
-  
 
   return (
     <main>
@@ -31,7 +30,6 @@ export default function Home() {
       <Skills />
       <Contact />
       <About />
-
-      </main>
-      );
+    </main>
+  );
 }
